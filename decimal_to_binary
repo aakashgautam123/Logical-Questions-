@@ -1,0 +1,24 @@
+#include<stdio.h>
+void main()
+{
+  int decimal;
+  printf("Enter the decimal number\n");
+  scanf("%d",&decimal);
+
+  int bin[32];
+  int i = 31;
+  for(int k = 0 ; k < 32; k++){
+    bin[k] = 0;
+  }
+  while(decimal!=0)
+  {
+    int remainder = decimal%2;
+    bin[i] = remainder;
+    decimal = decimal /2 ;
+    i--;
+  }
+  for(int j = 0 ;j < 32 ; j++)
+  {
+    printf("%d ",bin[j]);
+  }
+}
